@@ -44,3 +44,9 @@ The following visualizations are included:
 - **Box Plot**: Distribution of billed services  
 - **Scatter Plot**: Relationship between Load and Units Consumed  
 
+## 🛠️ Technologies Used
+
+- **Python**
+- **Pandas**
+- **Matplotlib**
+- **Seaborn**
