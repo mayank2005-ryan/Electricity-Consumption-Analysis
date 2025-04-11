@@ -55,12 +55,13 @@ while True:
             plt.show()
         elif obj_choice == "2":
             top_areas = df.groupby('Area')['Units'].sum().nlargest(10)
-            plt.figure(figsize=(10, 6))
+            plt.figure(figsize=(14, 8))
             top_areas.plot(kind='bar', color='darkred')
             plt.title('Top 10 Areas by Electricity Consumption')
             plt.xlabel('Area')
             plt.ylabel('Total Units')
-            plt.xticks(rotation=45)
+            plt.xticks(rotation=60)
+            plt.tight_layout()
             plt.show()
         elif obj_choice == "3":
             plt.figure(figsize=(10, 5))
@@ -70,12 +71,13 @@ while True:
             plt.ylabel('Billed Services')
             plt.show()
         elif obj_choice == "4":
-            plt.figure(figsize=(12, 6))
+            plt.figure(figsize=(16, 8))
             sns.barplot(x=df['Circle'], y=df['Units'], hue=df['Circle'], estimator=sum, palette='viridis', legend=False)
-            plt.xticks(rotation=45)
+            plt.xticks(rotation=60)
             plt.title('Total Electricity Consumption by Circle')
             plt.xlabel('Circle')
             plt.ylabel('Total Units')
+            plt.tight_layout()
             plt.show()
         elif obj_choice == "5":
             plt.figure(figsize=(8, 5))
